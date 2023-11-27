@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dopetrope by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html">Tony Thurman</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								
+								
+							
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<a href="#" class="image featured"><img src="https://i.ibb.co/VJwD3C6/1-gs-UVMFZv-M-YSA1-Wz-ZHs-R2w.png" width="300" height="470" /></a>
+								<header>
+									<h2>Preparing Network Traffic for Wireshark using TCPDump.</h2>
+									<p>This is a step by step walkthrough for the live capture.</p>
+								</header>
+								<p>
+									1. The first step is to create a shell for the live capture and decide how many packets we will capture for Wireshark. We will use analyze 25 packets from a sample website called skyroute66 using TCPDump.
+
+									When writing the shell script we will use sudo for special permission, and lower case -c followed by 25 for the count of packets being captured. The [-##XXtttt] command will allow our capture to be organized by column for a better analysis experience. Lastly, we will use the write command -w followed by the file name we want to call it. We can call the pcap file wscapture. 
+
+									The shell script will look like:<br>
+
+									<code> sudo tcpdump -XXtttt host skyroute66.com -c 25 -w wscapture.cpap </code><br>
+
+									2. The terminal will show us this output:<br>
+
+									<a href="https://ibb.co/F4XYQ6t"><img src="https://i.ibb.co/RTN6X2W/capt4.png" alt="capt4" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br /><br>
+
+									3. By using the write command and wscapture  the file is created and we can now open and better analyze the traffic in Wireshark. Symbols, protocol, and destination information can be studied in Wireshark to triage tickets and/or for research.<br>
+								</p>
+								
+							</article>
+
+					</div>
+				</section>
+
+			
+
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
